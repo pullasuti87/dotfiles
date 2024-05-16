@@ -159,4 +159,3 @@ endfunction
 "     set lines=44 " set height
 " endif
 
-
