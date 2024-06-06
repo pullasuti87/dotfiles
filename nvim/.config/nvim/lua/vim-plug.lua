@@ -1,4 +1,13 @@
-local plug = vim.fn["plug#"]
+  8 -- install vim-plug if not found
+  7 local plug_path = vim.fn.stdpath('data') .. '/site/autoload/plug.vim'
+  6 if vim.fn.glob(plug_path) == '' then
+  5   vim.fn.system({
+  4     'curl', '-fLo', plug_path, '--create-dirs',
+  3     'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  2   })
+  1 end
+
+local plug = vim.fn.plug
 local call = vim.call
 --------------------------------------------
 -- AWESOME NEOVIM PLUGINS
