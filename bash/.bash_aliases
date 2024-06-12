@@ -1,8 +1,9 @@
-alias clean="sudo dnf clean all"
-alias install="sudo dnf install"
+alias clean="sudo apt autoremove"
+alias install="sudo apt install"
 alias py="python3"
 alias text="gnome-text-editor"
-alias update="sudo dnf update"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
 # alias vi="gvim -v"
 alias vi="nvim"
 

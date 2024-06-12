@@ -34,7 +34,7 @@ local function ShowGitBranch()
         -- remove whitespace
         result = result:gsub("%s", "")
 		if result  ~= "" then
-			return "" .. result .. ""
+			return "" .. result .. ""
 		else
 			return ""
 		end

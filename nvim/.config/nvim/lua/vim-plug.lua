@@ -1,13 +1,10 @@
-  8 -- install vim-plug if not found
-  7 local plug_path = vim.fn.stdpath('data') .. '/site/autoload/plug.vim'
-  6 if vim.fn.glob(plug_path) == '' then
-  5   vim.fn.system({
-  4     'curl', '-fLo', plug_path, '--create-dirs',
-  3     'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  2   })
-  1 end
+-- install vim-plug if not found
+local plug_path = vim.fn.stdpath('data') .. '.config/nvim/autoload/plug.vim'
+if vim.fn.glob(plug_path) == '' then
+    vim.fn.system('curl -fLo ' .. plug_path .. ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+end
 
-local plug = vim.fn.plug
+local plug = vim.fn['plug#']
 local call = vim.call
 --------------------------------------------
 -- AWESOME NEOVIM PLUGINS
@@ -34,7 +31,7 @@ plug("saadparwaiz1/cmp_luasnip")
 plug("nvim-treesitter/nvim-treesitter", { ["do"] = ":TSUpdate" })
 -- needed for telescope
 plug("nvim-lua/plenary.nvim")
-plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.5" })
+plug("nvim-telescope/telescope.nvim", { ["tag"] = "0.1.6" })
 -- copilot in lua
 plug("zbirenbaum/copilot.lua")
 
