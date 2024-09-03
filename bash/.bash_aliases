@@ -5,7 +5,7 @@ alias text="gnome-text-editor"
 alias update="sudo apt update && sudo apt upgrade"
 # alias upgrade="sudo apt upgrade"
 # alias vi="gvim -v"
-alias vi = "vim"
+alias vi="vim"
 alias nv="nvim"
 
 ### fzf aliases/functions 
