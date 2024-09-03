@@ -2,10 +2,11 @@ alias clean="sudo apt autoremove"
 alias install="sudo apt install"
 alias py="python3"
 alias text="gnome-text-editor"
-alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
+alias update="sudo apt update && sudo apt upgrade"
+# alias upgrade="sudo apt upgrade"
 # alias vi="gvim -v"
-alias vi="nvim"
+alias vi = "vim"
+alias nv="nvim"
 
 ### fzf aliases/functions 
 alias fd="cd ~ && cd \$(find * . -type d | fzf)"
@@ -33,7 +34,7 @@ pysetup() {
     # install required packages (Neovim)
     pip install "python-lsp-server[all]" python-lsp-black
     # install completed
-    echo "Python development environment set up with '.venv' virtual environment."
+    echo "python development environment set up with '.venv' virtual environment."
 }
 
 # install code formatter prettier (Neovim)

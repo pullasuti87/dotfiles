@@ -1,6 +1,6 @@
-local cmd = vim.cmd
 local keymap = vim.api.nvim_set_keymap
 local map = vim.keymap.set
+local cmd = vim.cmd
 --------------------------------------------
 -- CUSTOM KEYMAPS
 
@@ -14,8 +14,8 @@ keymap("n", "<Space>d", ":Termdebug<CR>", { noremap = true, silent = true }) -- 
 
 keymap("n", "<Space>w", "<C-w><C-w>", { noremap = true, silent = true }) -- navigate between windows
 
-keymap('n', '<M-.>', ':bnext<CR>', { noremap = true, silent = true }) -- next buffer
-keymap('n', '<M-,>', ':bprev<CR>', { noremap = true, silent = true }) -- prev nuffer
+keymap("n", "<M-.>", ":bnext<CR>", { noremap = true, silent = true }) -- next buffer
+keymap("n", "<M-,>", ":bprev<CR>", { noremap = true, silent = true }) -- prev nuffer
 
 keymap("n", "<CR>", ":noh<CR><CR>", { noremap = true, silent = true }) -- removes last highlight
 
@@ -48,14 +48,16 @@ autocmd FileType javascript,typescript,json,markdown nnoremap <buffer> <Space>f 
 cmd([[
 autocmd FileType lua nnoremap <buffer> <Space>f :silent !npx stylua %<CR><CR>
 ]])
+
 -- format for C/C++
 -- cmd([[
 -- autocmd FileType c,cpp nnoremap <buffer> <Space>f :silent !clang-format -style=file -i %<CR><CR>
 -- ]])
+--
 -- format for GO
--- cmd([[
--- autocmd FileType go,gomod,gowork,gotmpl nnoremap <buffer> <Space>f :silent !gofmt -w %<CR><CR>
--- ]])
+cmd([[
+ autocmd FileType go,gomod,gowork,gotmpl nnoremap <buffer> <Space>f :silent !gofmt -w %<CR><CR>
+ ]])
 
 -- save session
 cmd("command! Save mksession! session.vim")

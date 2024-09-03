@@ -74,7 +74,7 @@ inoremap "<CR> ""<Left>
 inoremap '<CR> ''<Left>
 inoremap <<CR> <><Left>
 
-" format file
+" indent file
 nnoremap <Space>f gg=G
 
 " navigate completion menu
