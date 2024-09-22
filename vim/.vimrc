@@ -1,9 +1,10 @@
 """ VIM CONFIGURATION (no externel plugins)
-" Last Updated: 12/02/2024
+" Last Updated: 22/09/2024
 
 set nocompatible " disable compatibility with vi
 
-colorscheme slate " others desert, peachpuff
+colorscheme retrobox " others desert, peachpuff, slatea, sorbet
+set background=dark
 set termguicolors " 24-bit true color support
 syntax on " syntax highlight
 

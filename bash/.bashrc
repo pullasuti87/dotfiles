@@ -128,7 +128,7 @@ fi
 
 ### CUSTOM DEFINITIONS ###
 # makes nvim default editor
-export EDITOR="nvim"
+export EDITOR="vim"
 # some apps might use this as alternative text editor
 export VISUAL="$EDITOR"
 

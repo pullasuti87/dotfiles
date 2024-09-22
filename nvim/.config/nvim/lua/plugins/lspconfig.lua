@@ -17,7 +17,7 @@ local lspconfig = require("lspconfig")
 -- LSP servers
 local lsp_servers = {
 	{ server = "pylsp", filetypes = { "python" } },
-	{ server = "tsserver", filetypes = { "javascript", "typescript" } },
+	{ server = "ts_ls", filetypes = { "javascript", "typescript" } },
     { server = "gopls", filetypes = { "go", "gomod", "gowork", "gotmpl" } },
 --	{
 --		server = "clangd",
