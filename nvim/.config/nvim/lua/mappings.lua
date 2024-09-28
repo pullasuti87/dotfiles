@@ -20,10 +20,10 @@ keymap("n", "<M-,>", ":bprev<CR>", { noremap = true, silent = true }) -- prev nu
 keymap("n", "<CR>", ":noh<CR><CR>", { noremap = true, silent = true }) -- removes last highlight
 
 ---- telescope
-map("n", "<leader>f", require("telescope.builtin").find_files, {})
-map("n", "<leader>g", require("telescope.builtin").live_grep, {})
-map("n", "<leader>b", require("telescope.builtin").buffers, {})
-map("n", "<leader>h", require("telescope.builtin").help_tags, {})
+-- map("n", "<leader>f", require("telescope.builtin").find_files, {})
+-- map("n", "<leader>g", require("telescope.builtin").live_grep, {})
+-- map("n", "<leader>b", require("telescope.builtin").buffers, {})
+-- map("n", "<leader>h", require("telescope.builtin").help_tags, {})
 
 ---- vanilla autopairing
 keymap("i", "(<CR>", "()<Left>", { noremap = true, silent = true })

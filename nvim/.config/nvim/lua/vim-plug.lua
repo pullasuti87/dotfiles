@@ -40,10 +40,10 @@ call("plug#end")
 --------------------------------------------
 -- CONFIGURATIONS
 
-require("plugins/cmp")
-require("plugins/copilot")
-require("plugins/lspconfig")
-require("plugins/netrw")
-require("plugins/rosepine")
-require("plugins/treesitter")
-require("plugins/snippets")
+-- require("plugins/cmp")
+-- require("plugins/copilot")
+-- require("plugins/lspconfig")
+-- require("plugins/netrw")
+-- require("plugins/rosepine")
+-- require("plugins/treesitter")
+-- require("plugins/snippets")

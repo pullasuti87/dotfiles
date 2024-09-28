@@ -19,7 +19,7 @@ alias fd="cd ~ && cd \$(find * . -type d | fzf)"
 
  ff() {
     local selected_file
-    selected_file=$(find ~ -type f | fzf) && vim "$selected_file"
+    selected_file=$(find ~ -type f | fzf) && vi "$selected_file"
  }
 
 ##### npm related aliases #####
@@ -36,7 +36,7 @@ alias fd="cd ~ && cd \$(find * . -type d | fzf)"
 #     # install completed
 #     echo "python development environment set up with '.venv' virtual environment."
 # }
-# 
+#
 # # install code formatter prettier (Neovim)
 # tssetup() {
 #      npm i prettier

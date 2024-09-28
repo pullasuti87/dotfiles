@@ -18,7 +18,7 @@ local opt = vim.opt
 -- end
 --]
 
-cmd([[colorscheme rose-pine]]) -- add colorscheme
+-- cmd([[colorscheme rose-pine]]) -- add colorscheme
 cmd([[packadd termdebug]]) -- add default debugger
 cmd([[set title]]) -- set title
 cmd([[set noshowmode]]) -- don't show the mode under statusline

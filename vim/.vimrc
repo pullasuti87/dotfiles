@@ -3,7 +3,7 @@
 
 set nocompatible " disable compatibility with vi
 
-colorscheme retrobox " others desert, peachpuff, slatea, sorbet
+colorscheme sorbet " retrobox desert, peachpuff, slatea, sorbet
 set background=dark
 set termguicolors " 24-bit true color support
 syntax on " syntax highlight
@@ -110,7 +110,7 @@ if has('statusline')
   set statusline+=\         " empty space
 endif
 
-" shows what highlight group is under the cursor
+" shows what highlight group is under cursor
 function! SyntaxItem()
   return synIDattr(synID(line("."),col("."),1),"name")
 endfunction
@@ -136,21 +136,26 @@ function! CheckIfNetrw()
   endif
 endfunction
 
-" calls custom command for grep search
-command! -nargs=+ Grep :call GrepSearch(<q-args>)
-" takes the given parameter and makes a vimgrep search
+" custom command
+command! -nargs=+ G call GrepSearch(<q-args>)
+
+" takes parameter, makes a vimgrep search
 function! GrepSearch(args)
-    let l:command = 'vimgrep /\c' . a:args . '/j **/*'
+    " escape special characters in search pattern
+    let l:escaped_args = escape(a:args, '\')
+    let l:command = 'vimgrep /\c' . l:escaped_args . '/j **/*'
+
     try
         execute l:command
         copen
     catch
-        echoerr 'Error executing vimgrep'
+        echoerr 'error executing vimgrep'
     endtry
 endfunction
 
+
 """ GVim configs
-" check if running in GUI (GVim) or terminal
+" check if running in GVim or terminal
 " if has("gui_running")
 "     "set guioptions-=m " hides menu bar
 "     set guioptions-=T " hides toolbar
