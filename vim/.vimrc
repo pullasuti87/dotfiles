@@ -3,6 +3,8 @@
 
 set nocompatible " disable compatibility with vi
 
+" colorscheme shine " slatea, shine
+" set background=light
 colorscheme sorbet " retrobox desert, peachpuff, slatea, sorbet
 set background=dark
 set termguicolors " 24-bit true color support
