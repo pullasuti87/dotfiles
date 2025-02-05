@@ -3,10 +3,10 @@
 
 set nocompatible " disable compatibility with vi
 
-" colorscheme shine " slatea, shine
-" set background=light
-colorscheme sorbet " retrobox desert, peachpuff, slatea, sorbet
-set background=dark
+set background=light
+colorscheme peachpuff " shine, peachpuff, retrobox
+" set background=dark
+" colorscheme sorbet "  desert, sorbet, slate
 set termguicolors " 24-bit true color support
 syntax on " syntax highlight
 
@@ -26,11 +26,15 @@ set wildmenu " better command-line completion
 set wildmode=longest,list,full " file and command-line tab completion
 set completeopt=menuone,longest,preview " auto completion as you type
 
-set tabstop=4 " number of spaces in a tab
-set softtabstop=4 " number of spaces when pressing tab
+" defaults
+set tabstop=2 " number of spaces in a tab
+set shiftwidth=2 " number of spaces for each level of indentation
+set softtabstop=2 " number of spaces when pressing tab
 set expandtab " replaces typed tabs the number of spaces
-set shiftwidth=4 " number of spaces for each level of indentation
 set scrolloff=8 " scrolling show upcoming lines
+
+" use 4 spaces for python
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 set autoindent " ineindents a new line to match the previous line's indentation
 set smartindent " automatically aliging code within blocks
